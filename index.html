@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProblemPick Privacy Policy</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .lang-btn {
+            transition: all 0.3s ease;
+        }
+        .lang-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Language Selector -->
+        <div class="fixed top-4 right-4 flex gap-2">
+            <button id="ko-btn" class="lang-btn bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600">한국어</button>
+            <button id="en-btn" class="lang-btn bg-gray-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-600">English</button>
+        </div>
+
+        <!-- Korean Version -->
+        <div id="ko-version" class="container mx-auto px-4 py-8 max-w-4xl">
+            <h1 class="text-3xl font-bold text-center mb-8">ProblemPick(문제담기) 개인정보처리방침</h1>
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <p class="text-gray-600 mb-4">최종 수정일: 2024년 11월 19일</p>
+
+                <h2 class="text-2xl font-semibold mb-4">1. 개요</h2>
+                <p class="mb-6">ProblemPick(문제담기) 앱(이하 "서비스")은 사용자의 개인정보보호를 매우 중요하게 생각하며, 「개인정보보호법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」과 관련 법령을 준수하고 있습니다.</p>
+
+                <h2 class="text-2xl font-semibold mb-4">2. 수집하는 개인정보의 항목</h2>
+                <h3 class="text-xl font-medium mb-2">필수적 수집 항목</h3>
+                <ul class="list-disc pl-6 mb-4">
+                    <li>기기 식별자(Device ID)</li>
+                    <li>Firebase 인증 관련 정보</li>
+                    <li>저장소 접근 권한</li>
+                    <li>카메라 접근 권한</li>
+                </ul>
+
+                <!-- 나머지 한국어 버전 내용 -->
+            </div>
+        </div>
+
+        <!-- English Version -->
+        <div id="en-version" class="container mx-auto px-4 py-8 max-w-4xl hidden">
+            <h1 class="text-3xl font-bold text-center mb-8">ProblemPick Privacy Policy</h1>
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+                <p class="text-gray-600 mb-4">Last Updated: November 19, 2024</p>
+
+                <h2 class="text-2xl font-semibold mb-4">1. Introduction</h2>
+                <p class="mb-6">At ProblemPick, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information when you use our mobile application (the "Service").</p>
+
+                <h2 class="text-2xl font-semibold mb-4">2. Information We Collect</h2>
+                <h3 class="text-xl font-medium mb-2">Essential Information</h3>
+                <ul class="list-disc pl-6 mb-4">
+                    <li>Device identifier</li>
+                    <li>Firebase authentication information</li>
+                    <li>Storage access permission</li>
+                    <li>Camera access permission</li>
+                </ul>
+
+                <!-- 나머지 영문 버전 내용 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const koBtn = document.getElementById('ko-btn');
+        const enBtn = document.getElementById('en-btn');
+        const koVersion = document.getElementById('ko-version');
+        const enVersion = document.getElementById('en-version');
+
+        koBtn.addEventListener('click', () => {
+            koVersion.classList.remove('hidden');
+            enVersion.classList.add('hidden');
+            koBtn.classList.remove('bg-gray-500');
+            koBtn.classList.add('bg-blue-500');
+            enBtn.classList.remove('bg-blue-500');
+            enBtn.classList.add('bg-gray-500');
+        });
+
+        enBtn.addEventListener('click', () => {
+            enVersion.classList.remove('hidden');
+            koVersion.classList.add('hidden');
+            enBtn.classList.remove('bg-gray-500');
+            enBtn.classList.add('bg-blue-500');
+            koBtn.classList.remove('bg-blue-500');
+            koBtn.classList.add('bg-gray-500');
+        });
+    </script>
+</body>
+</html>
